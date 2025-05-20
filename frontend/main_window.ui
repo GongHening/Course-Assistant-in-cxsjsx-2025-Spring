@@ -8,7 +8,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <layout class="QVBoxLayout" name="leftLayout">
+     <layout class="QVBoxLayout" name="verticalLayoutLeft">
       <item>
        <widget class="QPushButton" name="btn_add_course">
         <property name="text">
@@ -23,16 +23,47 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_add_hw">
+        <property name="text">
+         <string>添加作业</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_del_hw">
+        <property name="text">
+         <string>删除作业</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <widget class="QTableWidget" name="table">
-      <property name="columnCount">
-       <number>7</number>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
       </property>
-      <property name="rowCount">
-       <number>12</number>
-      </property>
+      <widget class="QWidget" name="tab_courses">
+       <attribute name="title">
+        <string>课程表</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutCourses">
+        <item>
+         <widget class="QTableWidget" name="table"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_homework">
+       <attribute name="title">
+        <string>作业管理</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayoutHomework">
+        <item>
+         <widget class="QTableWidget" name="homeworkTable"/>
+        </item>
+       </layout>
+      </widget>
      </widget>
     </item>
    </layout>
