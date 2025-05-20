@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CourseDialog</class>
+ <widget class="QDialog" name="CourseDialog">
+  <property name="windowTitle">
+   <string>添加课程</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_name">
+     <property name="text">
+      <string>课程名称</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEdit_name"/>
+   </item>
+
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_weekday">
+     <property name="text">
+      <string>星期</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="comboBox_weekday">
+     <item><property name="text"><string>周一</string></property></item>
+     <item><property name="text"><string>周二</string></property></item>
+     <item><property name="text"><string>周三</string></property></item>
+     <item><property name="text"><string>周四</string></property></item>
+     <item><property name="text"><string>周五</string></property></item>
+     <item><property name="text"><string>周六</string></property></item>
+     <item><property name="text"><string>周日</string></property></item>
+    </widget>
+   </item>
+
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_section">
+     <property name="text">
+      <string>节次</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QSpinBox" name="spinBox_section">
+     <property name="minimum"><number>1</number></property>
+     <property name="maximum"><number>12</number></property>
+    </widget>
+   </item>
+
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_room">
+     <property name="text">
+      <string>教室</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="lineEdit_room"/>
+   </item>
+
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_color">
+     <property name="text">
+      <string>颜色（可选）</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="color_picker">
+     <property name="placeholderText"><string>#aee1f9</string></property>
+    </widget>
+   </item>
+
+   <item row="5" column="0" colspan="2">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
