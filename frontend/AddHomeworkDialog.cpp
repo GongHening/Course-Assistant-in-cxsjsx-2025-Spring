@@ -1,5 +1,5 @@
 #include "AddHomeworkDialog.h"
-#include "ui_AddHomeworkDialog.h" // 必须与.ui文件名对应
+#include "ui_AddHomeworkDialog.h" 
 
 // 构造函数：初始化界面和数据
 AddHomeworkDialog::AddHomeworkDialog(const QStringList &courses, QWidget *parent) :
