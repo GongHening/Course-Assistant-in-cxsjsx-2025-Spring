@@ -11,6 +11,17 @@ Task::Task(QObject *parent)
 {
 }
 
+Task::Task(const Task &other)
+    : QObject(other.parent()),
+      m_title(other.m_title),
+      m_dueDate(other.m_dueDate),
+      m_courseName(other.m_courseName),
+      m_description(other.m_description),
+      m_isCompleted(other.m_isCompleted),
+      m_isExam(other.m_isExam) 
+{
+}
+
 // 带参数的构造函数
 Task::Task(const QString &title, const QDate &dueDate, bool isExam, QObject *parent)
     : QObject(parent),
