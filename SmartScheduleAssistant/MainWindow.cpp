@@ -176,14 +176,9 @@ void MainWindow::updateTaskList()
 {
     ui->taskTable->setRowCount(0);
 
-    // 这里应该从任务管理器获取任务列表
-    // 示例代码，实际应该替换为从TaskManager获取任务
-    QList<Task*> tasks; // 应该从任务管理器获取
-
-    for (int i = 0; i < tasks.size(); ++i) {
-        Task *task = tasks[i];
-
-        ui->taskTable->insertRow(i);
+    for (const Task &task : m_taskManager.getAllTasks()) {
+        int row = ui->taskTable->rowCount();
+        ui->taskTable->insertRow(row);
 
         // 状态图标
         QTableWidgetItem *statusItem = new QTableWidgetItem();
@@ -327,12 +322,20 @@ void MainWindow::addTask()
     TaskDialog dialog(this);
     dialog.setCourseList(m_scheduleManager->getAllCourses());
 
+    // 连接信号
+    connect(&dialog, &TaskDialog::taskConfirmed, this, &MainWindow::handleNewTask);
+    
     if (dialog.exec() == QDialog::Accepted) {
-        Task *task = dialog.getTask();
-        // 这里应该将任务添加到任务管理器
-        // m_taskManager->addTask(task);
+        Task newTask = dialog.getTask();
+        m_taskManager.addTask(newTask);
         updateTaskList();
     }
+}
+
+// 信号处理函数
+void MainWindow::handleNewTask(const Task &task) {
+    m_taskManager.addTask(task);
+    updateTaskList();
 }
 
 // 标记任务完成
