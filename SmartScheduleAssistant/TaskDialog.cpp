@@ -71,15 +71,15 @@ void TaskDialog::setTask(Task *task)
 }
 
 // 从对话框获取任务信息
-Task* TaskDialog::getTask() const
+Task TaskDialog::getTask() const
 {
-    Task *task = m_task ? m_task : new Task();
+    Task task;
 
-    task->setTitle(ui->editTitle->text().trimmed());
-    task->setCourseName(ui->comboCourse->currentText());
-    task->setDueDate(ui->dateEdit->date());
-    task->setExam(ui->checkExam->isChecked());
-    task->setDescription(ui->editDescription->toPlainText().trimmed());
+    task.setTitle(ui->editTitle->text().trimmed());
+    task.setCourseName(ui->comboCourse->currentText());
+    task.setDueDate(ui->dateEdit->date());
+    task.setExam(ui->checkExam->isChecked());
+    task.setDescription(ui->editDescription->toPlainText().trimmed());
 
     return task;
 }
@@ -118,6 +118,9 @@ void TaskDialog::validateInput()
         return;
     }
 
+     // 发射信号（传递新任务数据）
+    emit taskConfirmed(getTask());
+    
     // 所有验证通过，接受对话框
     accept();
 }
