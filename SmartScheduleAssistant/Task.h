@@ -26,6 +26,8 @@ public:
     explicit Task(QObject *parent = nullptr);
     Task(const QString &title, const QDate &dueDate, bool isExam = false, QObject *parent = nullptr);
 
+    Task(const Task &other);
+
     // 序列化支持
     friend QDataStream &operator<<(QDataStream &out, const Task &task);
     friend QDataStream &operator>>(QDataStream &in, Task &task);
