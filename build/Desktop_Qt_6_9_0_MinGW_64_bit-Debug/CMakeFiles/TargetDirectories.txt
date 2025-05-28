@@ -1,3 +1,0 @@
-D:/Course-Assistant-in-cxsjsx/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/CourseAssistant.dir
-D:/Course-Assistant-in-cxsjsx/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-D:/Course-Assistant-in-cxsjsx/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
