@@ -15,6 +15,8 @@ add_executable(CourseAssistant
     frontend/MainWindow.h
     frontend/MainWindow.cpp
     main.cpp
+    backend/Course.cpp
+
 )
 
 # 链接Qt6库
