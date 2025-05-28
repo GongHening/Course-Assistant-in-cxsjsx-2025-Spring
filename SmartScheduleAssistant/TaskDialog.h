@@ -19,7 +19,7 @@ public:
     ~TaskDialog();
 
     void setTask(Task *task);
-    Task* getTask() const;
+    Task getTask() const;
 
     void setCourseList(const QList<Course*> &courses);
 
