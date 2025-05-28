@@ -23,6 +23,9 @@ public:
 
     void setCourseList(const QList<Course*> &courses);
 
+signals:
+    void taskConfirmed(const Task &task);  // 新增信号
+
 private slots:
     void validateInput();
 
