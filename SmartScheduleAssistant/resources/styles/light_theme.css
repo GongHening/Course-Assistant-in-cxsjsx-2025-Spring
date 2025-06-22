@@ -1,0 +1,46 @@
+/* 全局背景颜色 */
+QWidget {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #f0f0f0;
+    color: #333;
+    border-color: #ccc;
+}
+
+QPushButton:hover {
+    background-color: #e0e0e0;
+}
+
+/* 输入框样式 */
+QLineEdit, QTextEdit, QDateEdit, QTimeEdit {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+}
+
+/* 下拉框样式 */
+QComboBox {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+}
+
+/* 表格样式 */
+QTableWidget {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+}
+
+QTableWidget::item {
+    background-color: #fff;
+    color: #333;
+}
+
+QTableWidget::item:selected {
+    background-color: #e0e0e0;
+}
