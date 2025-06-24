@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>课程与任务管理系统</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableWidget" name="courseTable"/>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="taskTable"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="currentCourseLabel">
+        <property name="text">
+         <string>当前无课程</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="nextCourseLabel">
+        <property name="text">
+         <string>今天没有更多课程了</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCourse">
+    <property name="title">
+     <string>课程</string>
+    </property>
+    <addaction name="actionAddCourse"/>
+    <addaction name="actionEditCourse"/>
+    <addaction name="actionDeleteCourse"/>
+   </widget>
+   <widget class="QMenu" name="menuTask">
+    <property name="title">
+     <string>任务</string>
+    </property>
+    <addaction name="actionAddTask"/>
+    <addaction name="actionCompleteTask"/>
+    <addaction name="actionDeleteTask"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="actionShowHide"/>
+    <addaction name="actionExit"/>
+    <addaction name="actionSetReminder"/>
+   </widget>
+   <addaction name="menuCourse"/>
+   <addaction name="menuTask"/>
+   <addaction name="menuWindow"/>
+  </widget>
+  <action name="actionAddCourse">
+   <property name="text">
+    <string>添加课程</string>
+   </property>
+  </action>
+  <action name="actionEditCourse">
+   <property name="text">
+    <string>编辑课程</string>
+   </property>
+  </action>
+  <action name="actionDeleteCourse">
+   <property name="text">
+    <string>删除课程</string>
+   </property>
+  </action>
+  <action name="actionAddTask">
+   <property name="text">
+    <string>添加任务</string>
+   </property>
+  </action>
+  <action name="actionCompleteTask">
+   <property name="text">
+    <string>标记任务完成</string>
+   </property>
+  </action>
+  <action name="actionDeleteTask">
+   <property name="text">
+    <string>删除任务</string>
+   </property>
+  </action>
+  <action name="actionShowHide">
+   <property name="text">
+    <string>显示/隐藏</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="actionSetReminder">
+   <property name="text">
+    <string>设置提醒时间</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

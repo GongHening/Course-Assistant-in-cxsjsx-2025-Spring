@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TaskDialog</class>
+ <widget class="QDialog" name="TaskDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>任务编辑</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelTitle">
+       <property name="text">
+        <string>任务标题</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="editTitle"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelCourse">
+       <property name="text">
+        <string>关联课程</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="comboCourse"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelDate">
+       <property name="text">
+        <string>截止日期</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDateEdit" name="dateEdit">
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="labelTime">
+       <property name="text">
+        <string>截止时间</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QTimeEdit" name="timeEdit"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="labelExam">
+       <property name="text">
+        <string>是否为考试</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QCheckBox" name="checkExam"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="labelDescription">
+       <property name="text">
+        <string>任务描述</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QTextEdit" name="editDescription"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
